@@ -805,16 +805,16 @@ export default function DatamakeSite() {
             </a>
           </div>
 
-          {/* Big "datamake" - full width of content, half vw height */}
+          {/* Big "datamake" - full width of content, half vw height, foot hitting the ground */}
           <div
-            className="mt-12 flex h-[50vw] w-full items-center justify-center overflow-hidden border-t border-white/10 select-none"
+            className="mt-12 -mb-24 flex h-[50vw] w-full items-end justify-center overflow-hidden border-b border-white/20 select-none"
             aria-label="datamake"
             role="img"
           >
             <svg
               viewBox="0 0 1000 500"
               className="h-full w-full select-none"
-              preserveAspectRatio="xMidYMid meet"
+              preserveAspectRatio="xMidYMax meet"
               aria-hidden="true"
             >
               <defs>
@@ -826,18 +826,18 @@ export default function DatamakeSite() {
                   y2="100%"
                 >
                   <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#ffffff" stopOpacity="0.75" />
+                  <stop offset="100%" stopColor="#ffffff" stopOpacity="0.8" />
                 </linearGradient>
               </defs>
               <text
                 x="50%"
-                y="54%"
-                dominantBaseline="middle"
+                y="492"
+                dominantBaseline="auto"
                 textAnchor="middle"
                 fill="url(#footer-wordmark-grad)"
                 style={{
                   ...SERIF,
-                  fontSize: "215px",
+                  fontSize: "245px",
                   letterSpacing: "-0.035em",
                   fontWeight: 300,
                 }}
