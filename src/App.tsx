@@ -790,18 +790,62 @@ export default function DatamakeSite() {
           </div>
         </div>
 
-        <footer className="mt-16 flex flex-col gap-2 border-t border-white/15 pt-8 text-[13px] text-neutral-400 md:flex-row md:justify-between">
-          <p>
-            Contact Datamake, an entity of Categorical Analytics Pvt Ltd,
-            Hyderabad
-          </p>
+        <footer className="mt-16 border-t border-white/15 pt-8">
+          <div className="flex flex-col gap-2 text-[13px] text-neutral-400 md:flex-row md:justify-between">
+            <p>
+              Contact Datamake, an entity of Categorical Analytics Pvt Ltd,
+              Hyderabad
+            </p>
 
-          <a
-            href={`mailto:${EMAIL}`}
-            className="text-white underline underline-offset-4 hover:text-blue-300"
+            <a
+              href={`mailto:${EMAIL}`}
+              className="text-white underline underline-offset-4 hover:text-blue-300"
+            >
+              {EMAIL}
+            </a>
+          </div>
+
+          {/* Big "datamake" - full width of content, half vw height */}
+          <div
+            className="mt-12 flex h-[50vw] w-full items-center justify-center overflow-hidden border-t border-white/10 select-none"
+            aria-label="datamake"
+            role="img"
           >
-            {EMAIL}
-          </a>
+            <svg
+              viewBox="0 0 1000 500"
+              className="h-full w-full select-none"
+              preserveAspectRatio="xMidYMid meet"
+              aria-hidden="true"
+            >
+              <defs>
+                <linearGradient
+                  id="footer-wordmark-grad"
+                  x1="0%"
+                  y1="0%"
+                  x2="0%"
+                  y2="100%"
+                >
+                  <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
+                  <stop offset="100%" stopColor="#ffffff" stopOpacity="0.75" />
+                </linearGradient>
+              </defs>
+              <text
+                x="50%"
+                y="54%"
+                dominantBaseline="middle"
+                textAnchor="middle"
+                fill="url(#footer-wordmark-grad)"
+                style={{
+                  ...SERIF,
+                  fontSize: "215px",
+                  letterSpacing: "-0.035em",
+                  fontWeight: 300,
+                }}
+              >
+                datamake
+              </text>
+            </svg>
+          </div>
         </footer>
       </Section>
     </div>
