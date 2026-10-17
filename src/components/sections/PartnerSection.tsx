@@ -8,6 +8,8 @@ import { Footer } from "./Footer";
 export function PartnerSection() {
   return (
     <Section id="partner" dark>
+
+      
       <Label>Partner with us</Label>
 
       <h2 className={h2} style={SERIF}>

@@ -114,10 +114,12 @@ export function ContactDock() {
       {/* Free Consultation Modal */}
       {consultOpen && (
         <div
+          data-lenis-prevent
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in"
           onClick={() => setConsultOpen(false)}
         >
           <div
+            data-lenis-prevent
             className="relative w-full max-w-lg rounded-xl border border-white/15 bg-black p-6 sm:p-8 text-white shadow-2xl text-left"
             onClick={(e) => e.stopPropagation()}
             role="dialog"
@@ -259,10 +261,12 @@ export function ContactDock() {
       {/* Call Dialog */}
       {callOpen && (
         <div
+          data-lenis-prevent
           className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in"
           onClick={() => setCallOpen(false)}
         >
           <div
+            data-lenis-prevent
             className="relative w-full max-w-sm rounded-xl border border-white/15 bg-black p-6 text-white shadow-2xl text-left"
             onClick={(e) => e.stopPropagation()}
             role="dialog"

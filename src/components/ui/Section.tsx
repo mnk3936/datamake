@@ -12,7 +12,7 @@ export function Section({ id, dark = false, children }: SectionProps) {
       id={id}
       className={`scroll-mt-14 border-t border-[color:var(--sec-line)] ${
         dark
-          ? "bg-black text-white"
+          ? "bg-black text-white [--background:#000000] [--foreground:#ffffff] [--border:rgba(255,255,255,0.15)] [--muted-foreground:#a1a1aa]"
           : "bg-[color:var(--bg-a)] text-[color:var(--fg-a)]"
       }`}
     >

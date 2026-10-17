@@ -24,7 +24,7 @@ export function useRoute() {
       const nextRoute = parseHash(window.location.hash);
       setRoute(nextRoute);
       if (nextRoute !== "home") {
-        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.scrollTo(0, 0);
       }
     };
 

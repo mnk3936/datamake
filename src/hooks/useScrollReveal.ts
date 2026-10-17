@@ -2,10 +2,13 @@ import { useEffect, type RefObject } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-export function useScrollReveal(rootRef: RefObject<HTMLElement | null>) {
+export function useScrollReveal(
+  rootRef: RefObject<HTMLElement | null>,
+  route?: string
+) {
   useEffect(() => {
     const root = rootRef.current;
-    if (!root) return;
+    if (!root || (route && route !== "home")) return;
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
@@ -80,10 +83,11 @@ export function useScrollReveal(rootRef: RefObject<HTMLElement | null>) {
           }
         );
       });
+      ScrollTrigger.refresh();
     }, root);
 
     return () => {
       ctx.revert();
     };
-  }, [rootRef]);
+  }, [rootRef, route]);
 }

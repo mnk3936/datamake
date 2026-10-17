@@ -1,1 +1,61 @@
 @import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: var(--bg-a, #ffffff);
+    --foreground: var(--fg-a, #0a0a0a);
+    --border: var(--line-a, #e5e5e5);
+    --muted: var(--line-a, #f4f4f5);
+    --muted-foreground: var(--mut-a, #71717a);
+    --accent: var(--accent, #2563eb);
+    --accent-foreground: var(--fg-a, #0a0a0a);
+  }
+
+  .dm-dark {
+    --background: var(--bg-a, #000000);
+    --foreground: var(--fg-a, #f4f4f5);
+    --border: var(--line-a, rgba(255, 255, 255, 0.12));
+    --muted: rgba(255, 255, 255, 0.08);
+    --muted-foreground: var(--mut-a, #a1a1aa);
+    --accent: var(--accent, #60a5fa);
+    --accent-foreground: #ffffff;
+  }
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --font-serif: 'Merriweather', Georgia, 'Times New Roman', serif;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.2s ease-out;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.2s ease-out;
+}

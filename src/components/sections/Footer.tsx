@@ -1,4 +1,6 @@
 import { EMAIL } from "../../constants/site";
+import Faq05 from "../ui/faq-05";
+
 
 /**
  * Minimal footer for the black "Partner with us" section.
@@ -21,9 +23,11 @@ const link = "text-[12px] text-neutral-400 transition-colors hover:text-white";
 
 export function Footer() {
   return (
-    <footer className="mt-20 border-t border-white/15 pt-10 text-left">
+    <footer className="mt-24 border-t border-white/15 pt-16 text-left">
+      {/* Embedded FAQ */}
+
       {/* Small, minimal info row */}
-      <div className="grid gap-10 md:grid-cols-12">
+      <div className="border-t border-white/15 pt-14 grid gap-10 md:grid-cols-12">
         <div className="flex flex-col justify-between gap-8 md:col-span-5">
           <div>
             <Mark className="text-blue-500" />
@@ -33,6 +37,7 @@ export function Footer() {
               We source it. You make it work.
             </p>
           </div>
+          
           <p className="text-[10px] uppercase tracking-[0.14em] text-neutral-600">
             &copy; 2026 Datamake. All rights reserved.
           </p>
@@ -47,6 +52,7 @@ export function Footer() {
                 ["What we do", "#what-we-do"],
                 ["How it works", "#how-it-works"],
                 ["Partner with us", "#partner"],
+                ["FAQ", "#faq"],
               ].map(([text, href]) => (
                 <li key={href}>
                   <a href={href} className={link}>
@@ -95,8 +101,13 @@ export function Footer() {
         </div>
       </div>
 
+      <div className="mb-30 mt-20">
+        <Faq05 />
+      </div>
+
+
       {/* Giant wordmark, top half only, resting on the bottom edge of the page */}
-<div className="-mb-24 mt-[20vw] [container-type:inline-size]" aria-label="Datamake">        <div className="h-[9cqw] overflow-hidden">
+<div className="-mb-24 mt-[10vw] [container-type:inline-size]" aria-label="Datamake">        <div className="h-[9cqw] overflow-hidden">
           <span
             aria-hidden
             className="block select-none whitespace-nowrap bg-gradient-to-b from-neutral-200 via-neutral-500 to-neutral-800 bg-clip-text text-[20cqw] font-light leading-[0.8] tracking-tighter text-transparent"
