@@ -1,6 +1,8 @@
 import type { CSSProperties } from "react";
 
 export const EMAIL = "adeel@categoricalanalytics.com";
+export const PHONE = "+91 98765 43210";
+export const PHONE_TEL = "+919876543210";
 
 export const SERIF: CSSProperties = {
   fontFamily: "'Merriweather', Georgia, 'Times New Roman', serif",
@@ -30,7 +32,7 @@ export const THEME_CSS = `
 }
 .dm-dark{
   color-scheme:dark;
-  --bg-a:#0b0b0f;
+  --bg-a:#000000;
   --fg-a:#f4f4f5;
   --mut-a:#a1a1aa;
   --mut2-a:#d4d4d8;
@@ -40,7 +42,7 @@ export const THEME_CSS = `
   --dash2:rgba(255,255,255,.14);
   --corner:rgba(255,255,255,.3);
   --accent:#60a5fa;
-  --bg-blur:rgba(11,11,15,.85);
+  --bg-blur:rgba(0,0,0,.85);
   --btn-bg:#fff;
   --btn-fg:#0a0a0a;
   --card-ring:rgba(255,255,255,.14);

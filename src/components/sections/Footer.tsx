@@ -1,4 +1,4 @@
-import { SERIF, EMAIL } from "../../constants/site";
+import { EMAIL } from "../../constants/site";
 
 /**
  * Minimal footer for the black "Partner with us" section.
@@ -70,8 +70,25 @@ export function Footer() {
           </div>
 
           <div className="col-span-2 sm:col-span-1">
-            <p className={label}>Company</p>
-            <p className="mt-3 max-w-[14rem] text-[12px] leading-relaxed text-neutral-400">
+            <p className={label}>Legal &amp; Trust</p>
+            <ul className="dm-nav mt-3 space-y-1.5">
+              <li>
+                <a href="#/terms" className={link}>
+                  Terms &amp; Conditions
+                </a>
+              </li>
+              <li>
+                <a href="#/privacy" className={link}>
+                  Privacy Policy
+                </a>
+              </li>
+              <li>
+                <a href="#/security" className={link}>
+                  Security &amp; Ethics
+                </a>
+              </li>
+            </ul>
+            <p className="mt-4 text-[11px] leading-relaxed text-neutral-500">
               Datamake, an entity of Categorical Analytics Pvt Ltd
             </p>
           </div>
@@ -79,8 +96,7 @@ export function Footer() {
       </div>
 
       {/* Giant wordmark, top half only, resting on the bottom edge of the page */}
-      <div className="-mb-24 mt-16 [container-type:inline-size]" aria-label="Datamake">
-        <div className="h-[9cqw] overflow-hidden">
+<div className="-mb-24 mt-[20vw] [container-type:inline-size]" aria-label="Datamake">        <div className="h-[9cqw] overflow-hidden">
           <span
             aria-hidden
             className="block select-none whitespace-nowrap bg-gradient-to-b from-neutral-200 via-neutral-500 to-neutral-800 bg-clip-text text-[20cqw] font-light leading-[0.8] tracking-tighter text-transparent"
