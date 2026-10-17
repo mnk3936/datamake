@@ -146,9 +146,16 @@ export function ContactDock() {
               </svg>
             </button>
 
-            <span className="text-[11px] font-medium uppercase tracking-widest text-blue-400">
-              Datamake Consultation
-            </span>
+            <div className="flex items-center gap-2">
+              <img
+                src="/logo.png"
+                alt="Datamake"
+                className="h-4 w-auto invert object-contain"
+              />
+              <span className="text-[11px] font-medium uppercase tracking-widest text-blue-400">
+                Datamake Consultation
+              </span>
+            </div>
             <h2
               id="consult-title"
               className="mt-2 text-2xl font-light text-white"

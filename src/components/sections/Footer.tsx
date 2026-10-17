@@ -9,14 +9,7 @@ import Faq05 from "../ui/faq-05";
  * Uses the site's existing `dm-nav` hover underline (from THEME_CSS).
  */
 
-function Mark({ className = "" }: { className?: string }) {
-  return (
-    <svg width="18" height="10" viewBox="0 0 22 12" fill="none" aria-hidden className={className}>
-      <path d="M3 1h16l-2.5 4H.5L3 1Z" fill="currentColor" />
-      <path d="M3 7h16l-2.5 4H.5L3 7Z" fill="currentColor" opacity="0.45" />
-    </svg>
-  );
-}
+
 
 const label = "text-[10px] font-medium uppercase tracking-[0.14em] text-neutral-600";
 const link = "text-[12px] text-neutral-400 transition-colors hover:text-white";
@@ -25,12 +18,21 @@ export function Footer() {
   return (
     <footer className="mt-24 border-t border-white/15 pt-16 text-left">
       {/* Embedded FAQ */}
+      <div className="mb-20">
+        <Faq05 />
+      </div>
 
       {/* Small, minimal info row */}
       <div className="border-t border-white/15 pt-14 grid gap-10 md:grid-cols-12">
         <div className="flex flex-col justify-between gap-8 md:col-span-5">
           <div>
-            <Mark className="text-blue-500" />
+            <a href="#home" className="inline-block" aria-label="Datamake Home">
+              <img
+                src="/wordmark.png"
+                alt="Datamake"
+                className="h-9 w-auto invert object-contain opacity-90 transition-opacity hover:opacity-100"
+              />
+            </a>
             <p className="mt-4 max-w-[18rem] text-[14px] leading-snug text-neutral-200">
               Medical AI runs on data.
               <br />
@@ -99,10 +101,6 @@ export function Footer() {
             </p>
           </div>
         </div>
-      </div>
-
-      <div className="mb-30 mt-20">
-        <Faq05 />
       </div>
 
 

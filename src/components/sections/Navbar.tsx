@@ -18,19 +18,17 @@ export function Navbar({ isDark, onToggleTheme }: NavbarProps) {
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6 md:px-14">
           <a
             href="#home"
-            className="flex items-center gap-2.5 text-xl"
+            className="flex items-center gap-2.5 text-xl font-medium tracking-tight"
             style={SERIF}
           >
-            <span aria-hidden="true" className="grid grid-cols-3 gap-[2px]">
-              {[1, 1, 0.4, 1, 0.4, 1, 0.4, 1, 1].map((o, i) => (
-                <span
-                  key={i}
-                  className="h-[5px] w-[5px] bg-[color:var(--accent)]"
-                  style={{ opacity: o }}
-                />
-              ))}
-            </span>
-            Datamake
+            <img
+              src="/logo.png"
+              alt="Datamake Logo"
+              className={`h-6 w-auto object-contain transition-all ${
+                isDark ? "invert" : ""
+              }`}
+            />
+            <span>Datamake</span>
           </a>
 
           <nav className="hidden gap-8 text-[13px] text-[color:var(--mut-a)] md:flex">
