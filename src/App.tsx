@@ -790,61 +790,61 @@ export default function DatamakeSite() {
           </div>
         </div>
 
-        <footer className="mt-16 border-t border-white/15 pt-8">
-          <div className="flex flex-col gap-2 text-[13px] text-neutral-400 md:flex-row md:justify-between">
-            <p>
-              Contact Datamake, an entity of Categorical Analytics Pvt Ltd,
-              Hyderabad
-            </p>
-
-            <a
-              href={`mailto:${EMAIL}`}
-              className="text-white underline underline-offset-4 hover:text-blue-300"
+        <footer className="mt-20 border-t border-white/15 pt-10">
+          {/* First line: "data" */}
+          <div className="w-full overflow-hidden leading-none select-none">
+            <span
+              className="block font-light tracking-tighter text-white text-[23vw] sm:text-[19vw] md:text-[16vw] lg:text-[13.5rem] leading-[0.82]"
+              style={SERIF}
             >
-              {EMAIL}
-            </a>
+              data
+            </span>
           </div>
 
-          {/* Big "datamake" - full width of content, half vw height, foot hitting the ground */}
-          <div
-            className="mt-12 -mb-24 flex h-[50vw] w-full items-end justify-center overflow-hidden border-b border-white/20 select-none"
-            aria-label="datamake"
-            role="img"
-          >
-            <svg
-              viewBox="0 0 1000 500"
-              className="h-full w-full select-none"
-              preserveAspectRatio="xMidYMax meet"
-              aria-hidden="true"
-            >
-              <defs>
-                <linearGradient
-                  id="footer-wordmark-grad"
-                  x1="0%"
-                  y1="0%"
-                  x2="0%"
-                  y2="100%"
+          {/* Second line: footer items in the gap + "make" shifted to the right */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-end border-b border-white/20 -mb-24 pb-0">
+            {/* Gap on the left: Footer items */}
+            <div className="md:col-span-5 lg:col-span-6 pb-6 pt-4 flex flex-col justify-end gap-6 text-[13px] text-neutral-400">
+              {/* Navigation links */}
+              <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs font-medium uppercase tracking-wider text-neutral-400">
+                <a href="#home" className="hover:text-white transition-colors">
+                  Home
+                </a>
+                <a href="#what-we-do" className="hover:text-white transition-colors">
+                  What We Do
+                </a>
+                <a href="#partner" className="hover:text-white transition-colors">
+                  Partner
+                </a>
+              </div>
+
+              {/* Company & Contact */}
+              <div className="flex flex-col gap-1 leading-relaxed">
+                <a
+                  href={`mailto:${EMAIL}`}
+                  className="text-white text-sm font-medium underline underline-offset-4 hover:text-blue-300 w-fit"
                 >
-                  <stop offset="0%" stopColor="#ffffff" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#ffffff" stopOpacity="0.8" />
-                </linearGradient>
-              </defs>
-              <text
-                x="50%"
-                y="492"
-                dominantBaseline="auto"
-                textAnchor="middle"
-                fill="url(#footer-wordmark-grad)"
-                style={{
-                  ...SERIF,
-                  fontSize: "245px",
-                  letterSpacing: "-0.035em",
-                  fontWeight: 300,
-                }}
+                  {EMAIL}
+                </a>
+                <p>Contact Datamake, an entity of Categorical Analytics Pvt Ltd</p>
+                <p>Hyderabad, India • Verified Medical Datasets</p>
+              </div>
+
+              {/* Copyright */}
+              <p className="text-[11px] text-neutral-500 uppercase tracking-wider">
+                &copy; 2026 Datamake. All rights reserved.
+              </p>
+            </div>
+
+            {/* Shifted right: "make" with foot hitting the ground */}
+            <div className="md:col-span-7 lg:col-span-6 flex justify-end overflow-hidden leading-none select-none">
+              <span
+                className="block text-right font-light tracking-tighter text-white text-[23vw] sm:text-[19vw] md:text-[16vw] lg:text-[13.5rem] leading-[0.82] translate-y-[2%]"
+                style={SERIF}
               >
-                datamake
-              </text>
-            </svg>
+                make
+              </span>
+            </div>
           </div>
         </footer>
       </Section>
