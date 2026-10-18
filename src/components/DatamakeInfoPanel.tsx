@@ -5,22 +5,7 @@ import { SERIF } from "../constants/site";
 export function DatamakeInfoPanel() {
   return (
     <div className="relative z-10 mt-20 w-full max-w-5xl">
-      {/* Dashed guide frame with corner squares */}
-      <div className="relative border border-dashed border-[color:var(--dash2)] p-3 md:p-4">
-        {[
-          "-left-[3px] -top-[3px]",
-          "-right-[3px] -top-[3px]",
-          "-bottom-[3px] -left-[3px]",
-          "-bottom-[3px] -right-[3px]",
-        ].map((pos) => (
-          <span
-            key={pos}
-            aria-hidden="true"
-            className={`absolute h-[6px] w-[6px] border border-[color:var(--corner)] bg-[color:var(--bg-a)] ${pos}`}
-          />
-        ))}
-
-        <div className="grid grid-cols-1 divide-y divide-[color:var(--line-a)] border border-[color:var(--line-a)] bg-[color:var(--bg-a)] md:grid-cols-3 md:divide-x md:divide-y-0">
+      <div className="grid grid-cols-1 divide-y divide-[color:var(--line-a)] border border-[color:var(--line-a)] bg-[color:var(--bg-a)] md:grid-cols-3 md:divide-x md:divide-y-0">
           {/* Our process */}
           <section className="flex min-h-[260px] flex-col justify-between gap-10 p-7 text-left md:p-8">
             <PanelMark className="text-[color:var(--accent)]" />
@@ -100,7 +85,6 @@ export function DatamakeInfoPanel() {
             </div>
           </section>
         </div>
-      </div>
     </div>
   );
 }
