@@ -5,7 +5,8 @@ export const PHONE = "+91 98765 43210";
 export const PHONE_TEL = "+919876543210";
 
 export const SERIF: CSSProperties = {
-  fontFamily: "'Merriweather', Georgia, 'Times New Roman', serif",
+  fontFamily: "'Garet', 'Merriweather', Georgia, serif",
+  letterSpacing: "-0.015em",
 };
 
 export const h2 =

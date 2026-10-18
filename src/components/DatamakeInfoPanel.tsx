@@ -1,41 +1,6 @@
 import { PanelMark } from "./ui/Mark";
+import { PixelBlock } from "./ui/PixelBlock";
 import { SERIF } from "../constants/site";
-
-const PANEL_COLS = 12;
-const PANEL_ROWS = 8;
-
-const panelPixels = Array.from(
-  { length: PANEL_COLS * PANEL_ROWS },
-  (_, i) => {
-    const x = Math.sin((i + 1) * 12.9898) * 43758.5453;
-    return x - Math.floor(x);
-  }
-);
-
-function PanelPixelField() {
-  return (
-    <div
-      aria-hidden="true"
-      className="pointer-events-none absolute inset-0 grid"
-      style={{
-        gridTemplateColumns: `repeat(${PANEL_COLS}, 1fr)`,
-        gridTemplateRows: `repeat(${PANEL_ROWS}, 1fr)`,
-        maskImage: "linear-gradient(to bottom, black 20%, transparent 100%)",
-        WebkitMaskImage: "linear-gradient(to bottom, black 20%, transparent 100%)",
-      }}
-    >
-      {panelPixels.map((r, i) => (
-        <span
-          key={i}
-          className={r > 0.5 ? "bg-white" : "bg-blue-950"}
-          style={{
-            opacity: r > 0.5 ? 0.04 + (r - 0.5) * 0.4 : 0.05 + r * 0.3,
-          }}
-        />
-      ))}
-    </div>
-  );
-}
 
 export function DatamakeInfoPanel() {
   return (
@@ -77,9 +42,10 @@ export function DatamakeInfoPanel() {
           </section>
 
           {/* Scale and trust */}
-          <section className="relative flex min-h-[260px] flex-col justify-between gap-10 overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-blue-400 p-7 text-left md:p-8">
-            <PanelPixelField />
-
+          <PixelBlock
+            className="p-7 text-left md:p-8"
+            contentClassName="flex min-h-[260px] h-full flex-col justify-between gap-10"
+          >
             <PanelMark className="relative text-white" />
 
             <div className="relative">
@@ -95,7 +61,7 @@ export function DatamakeInfoPanel() {
                   >
                     50+
                   </dd>
-                  <dt className="mt-1 text-xs text-blue-100">
+                  <dt className="mt-1 text-xs text-white/80">
                     Partner centers
                   </dt>
                 </div>
@@ -107,13 +73,13 @@ export function DatamakeInfoPanel() {
                   >
                     2.5M+
                   </dd>
-                  <dt className="mt-1 text-xs text-blue-100">
+                  <dt className="mt-1 text-xs text-white/80">
                     Verified records
                   </dt>
                 </div>
               </dl>
             </div>
-          </section>
+          </PixelBlock>
 
           {/* Why it stays useful */}
           <section className="flex min-h-[260px] flex-col justify-between gap-10 p-7 text-left md:p-8">

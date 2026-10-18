@@ -7,7 +7,7 @@ import { Footer } from "./Footer";
 
 export function PartnerSection() {
   return (
-    <Section id="partner" dark>
+    <Section id="partner" dark noBorderTop>
 
       
       <Label>Partner with us</Label>

@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Garet';
+  font-style: normal;
+  font-weight: 300 500;
+  font-display: swap;
+  src: url('/fonts/Garet-Book.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/57477/Garet-Book.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Garet';
+  font-style: normal;
+  font-weight: 700 900;
+  font-display: swap;
+  src: url('/fonts/Garet-Heavy.woff') format('woff'),
+       url('https://fonts.cdnfonts.com/s/57477/Garet-Heavy.woff') format('woff');
+}
+
 @layer base {
   :root {
     --background: var(--bg-a, #ffffff);
@@ -23,6 +41,9 @@
 }
 
 @theme {
+  --font-sans: 'Garet', Inter, system-ui, sans-serif;
+  --font-serif: 'Garet', 'Merriweather', Georgia, serif;
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-border: var(--border);
@@ -30,8 +51,6 @@
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
   --color-accent-foreground: var(--accent-foreground);
-
-  --font-serif: 'Merriweather', Georgia, 'Times New Roman', serif;
 }
 
 @keyframes accordion-down {

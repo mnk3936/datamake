@@ -3,14 +3,20 @@ import type { ReactNode } from "react";
 interface SectionProps {
   id: string;
   dark?: boolean;
+  noBorderTop?: boolean;
   children: ReactNode;
 }
 
-export function Section({ id, dark = false, children }: SectionProps) {
+export function Section({
+  id,
+  dark = false,
+  noBorderTop = false,
+  children,
+}: SectionProps) {
   return (
     <section
       id={id}
-      className={`scroll-mt-14 border-t border-[color:var(--sec-line)] ${
+      className={`scroll-mt-14 ${noBorderTop ? "" : "border-t border-[color:var(--sec-line)]"} ${
         dark
           ? "bg-black text-white [--background:#000000] [--foreground:#ffffff] [--border:rgba(255,255,255,0.15)] [--muted-foreground:#a1a1aa]"
           : "bg-[color:var(--bg-a)] text-[color:var(--fg-a)]"

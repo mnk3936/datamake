@@ -18,21 +18,13 @@ export function Footer() {
   return (
     <footer className="mt-24 border-t border-white/15 pt-16 text-left">
       {/* Embedded FAQ */}
-      <div className="mb-20">
-        <Faq05 />
-      </div>
+
 
       {/* Small, minimal info row */}
       <div className="border-t border-white/15 pt-14 grid gap-10 md:grid-cols-12">
         <div className="flex flex-col justify-between gap-8 md:col-span-5">
           <div>
-            <a href="#home" className="inline-block" aria-label="Datamake Home">
-              <img
-                src="/wordmark.png"
-                alt="Datamake"
-                className="h-9 w-auto invert object-contain opacity-90 transition-opacity hover:opacity-100"
-              />
-            </a>
+
             <p className="mt-4 max-w-[18rem] text-[14px] leading-snug text-neutral-200">
               Medical AI runs on data.
               <br />
@@ -102,7 +94,9 @@ export function Footer() {
           </div>
         </div>
       </div>
-
+      <div className="mb-20 mt-10">
+        <Faq05 />
+      </div>
 
       {/* Giant wordmark, top half only, resting on the bottom edge of the page */}
 <div className="-mb-24 mt-[10vw] [container-type:inline-size]" aria-label="Datamake">        <div className="h-[9cqw] overflow-hidden">

@@ -86,9 +86,17 @@ export function Navbar({ isDark, onToggleTheme }: NavbarProps) {
 
             <a
               href="#partner"
-              className="bg-[color:var(--btn-bg)] px-4 py-2 text-[11px] font-medium uppercase tracking-wide text-[color:var(--btn-fg)] hover:bg-blue-700 hover:text-white"
+              className="group relative inline-flex items-center border border-[color:var(--fg-a)]/20 px-4 py-2 text-[11px] font-medium uppercase tracking-[0.14em] text-[color:var(--fg-a)] transition-all duration-300 hover:border-[#C0BEF4]/60 hover:text-[#C0BEF4] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C0BEF4]"
             >
               Partner with us
+              <span
+                aria-hidden="true"
+                className="absolute inset-x-0 -bottom-px h-px origin-left scale-x-0 transition-transform duration-500 ease-out group-hover:scale-x-100"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(90deg, #12004C, #C0BEF4, #12004C)",
+                }}
+              />
             </a>
           </div>
         </div>

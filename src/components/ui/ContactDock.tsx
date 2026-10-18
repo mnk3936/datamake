@@ -67,7 +67,7 @@ export function ContactDock() {
             setCallOpen(false);
             setConsultOpen(true);
           }}
-          className="bg-white/90 hover:bg-white text-neutral-950 px-4 py-2 rounded-full font-medium text-xs tracking-tight transition-all shadow-sm flex items-center gap-1.5 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+          className="group relative overflow-hidden text-white px-4 py-2 rounded-full font-medium text-xs tracking-tight transition-all duration-300 bg-white/15 border border-white/25 hover:border-[#C0BEF4]/60 hover:text-[#C0BEF4] flex items-center gap-1.5 whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#C0BEF4]"
         >
           <svg
             width="13"
@@ -152,7 +152,7 @@ export function ContactDock() {
                 alt="Datamake"
                 className="h-4 w-auto invert object-contain"
               />
-              <span className="text-[11px] font-medium uppercase tracking-widest text-blue-400">
+              <span className="text-[11px] font-medium uppercase tracking-widest text-[#C0BEF4]">
                 Datamake Consultation
               </span>
             </div>
@@ -236,7 +236,7 @@ export function ContactDock() {
                 <div className="pt-2 flex flex-col sm:flex-row items-center gap-3">
                   <button
                     type="submit"
-                    className="w-full sm:w-auto flex-1 rounded-md bg-blue-600 px-5 py-2.5 text-xs font-medium uppercase tracking-wider text-white hover:bg-blue-500 transition-colors"
+                    className="w-full sm:w-auto flex-1 rounded-md bg-white px-5 py-2.5 text-xs font-medium uppercase tracking-wider text-neutral-950 transition-all duration-300 hover:bg-[#C0BEF4] active:scale-[0.99]"
                   >
                     Request Consultation
                   </button>
