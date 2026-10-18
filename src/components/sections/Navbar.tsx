@@ -1,5 +1,3 @@
-import { SERIF } from "../../constants/site";
-
 interface NavbarProps {
   isDark: boolean;
   onToggleTheme: () => void;
@@ -18,8 +16,8 @@ export function Navbar({ isDark, onToggleTheme }: NavbarProps) {
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-6 md:px-14">
           <a
             href="#home"
-            className="flex items-center gap-2.5 text-xl font-medium tracking-tight"
-            style={SERIF}
+            className="flex items-center gap-2.5"
+            aria-label="Datamake Home"
           >
             <img
               src="/logo.png"
@@ -28,7 +26,13 @@ export function Navbar({ isDark, onToggleTheme }: NavbarProps) {
                 isDark ? "invert" : ""
               }`}
             />
-            <span>Datamake</span>
+            <img
+              src="/wordmark-white.png"
+              alt="Datamake"
+              className={`h-5 w-auto object-contain transition-all ${
+                isDark ? "" : "invert"
+              }`}
+            />
           </a>
 
           <nav className="hidden gap-8 text-[13px] text-[color:var(--mut-a)] md:flex">
