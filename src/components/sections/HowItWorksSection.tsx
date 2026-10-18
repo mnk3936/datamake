@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import { SERIF } from "../../constants/site";
+import { Label } from "../ui/Label";
 
 const STEPS = [
   ["Define", "We agree with you exactly what the data must do."],
@@ -117,18 +118,19 @@ export function HowItWorksSection() {
   }, []);
 
   return (
-    <section id="how-it-works">
+    <section
+      id="how-it-works"
+      className="scroll-mt-14 border-t border-[color:var(--sec-line)] bg-black text-white"
+    >
       {/* tall track = scroll distance */}
       <div ref={trackRef} className="relative md:h-[420vh]">
-        {/* the gradient is the pinned background */}
+        {/* pinned background */}
         <div className="bg-black md:sticky md:top-0 md:h-screen">
-          <div className="relative z-20 mx-auto flex w-full max-w-6xl flex-col justify-center gap-12 px-6 py-20 text-white md:h-screen md:flex-row md:items-center md:gap-16 md:py-0">
+          <div className="relative z-20 mx-auto flex h-full w-full max-w-6xl flex-col justify-center gap-12 border-x border-dashed border-white/15 px-6 py-20 text-white md:h-screen md:flex-row md:items-center md:gap-16 md:px-14 md:py-0">
             {/* ── left: heading ── */}
             <div className="md:w-5/12">
-              <p className="flex items-center gap-2 text-[11px] font-medium uppercase tracking-widest text-white/50">
-                <span className="inline-block h-px w-5 bg-white/30" />
-                How it works
-              </p>
+              <Label align="left">How it works</Label>
+
 
               <h2
                 className="mt-5 max-w-md text-3xl font-light leading-[1.15] tracking-tight md:text-5xl"

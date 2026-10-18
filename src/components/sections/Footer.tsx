@@ -21,7 +21,7 @@ export function Footer() {
 
 
       {/* Small, minimal info row */}
-      <div className="border-t border-white/15 pt-14 grid gap-10 md:grid-cols-12">
+      <div className=" pt-14 grid gap-10 md:grid-cols-12">
         <div className="flex flex-col justify-between gap-8 md:col-span-5">
           <div>
 
